@@ -47,7 +47,7 @@ async function isBlocked(url) {
   try {
     var README = await fetch(url + "/README.md");
     var content = await README.text();
-    if (content.startsWith("# 3kh0 Assets")) {
+    if (content.startsWith("## This website has been shutdown.")) {
       // The CDN is not blocked
       return false;
     } else {
